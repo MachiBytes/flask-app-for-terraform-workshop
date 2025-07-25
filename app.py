@@ -24,7 +24,6 @@ bucket_name = os.environ.get('S3_BUCKET_NAME', 'products-bucket')
 dynamodb = boto3.resource('dynamodb', region_name=region)
 table = dynamodb.Table(table_name)
 s3 = boto3.client('s3', region_name=region)
-bucket = s3.Bucket(bucket_name)
 
 @app.route('/products', methods=['POST'])
 def create_product():
