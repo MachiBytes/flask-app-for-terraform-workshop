@@ -53,7 +53,7 @@ def create_product():
                 image,
                 bucket_name,
                 s3_key,
-                ExtraArgs={'ContentType': image.content_type, 'ACL': 'public-read'}
+                ExtraArgs={'ContentType': image.content_type}
             )
             image_url = f"https://{bucket_name}.s3.{region}.amazonaws.com/{s3_key}"
 
